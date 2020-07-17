@@ -10,10 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class  SearchController {
+public class SearchController {
 
     @Autowired
     private SummonerApiService summonerApiService;
+
+    @Autowired
+    private LeagueApiService leagueApiService;
 
     @GetMapping("/summonerApi-service/summoners")
     public Summoner getSummoner(@RequestParam String SummonerId, @RequestParam String apiKey) {
@@ -22,6 +25,6 @@ public class  SearchController {
 
     @GetMapping("/leagueApi-service/leagues")
     public LeagueEntry getLeagueEntry(@RequestParam String encryptedSummonerId, @RequestParam String apiKey) {
-        return LeagueApiService.getLeagueEntry(encryptedSummonerId, apiKey);
+        return leagueApiService.getLeagueEntry(encryptedSummonerId, apiKey);
     }
 }
