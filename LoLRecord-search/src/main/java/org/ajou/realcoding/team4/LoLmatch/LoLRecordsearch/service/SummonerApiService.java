@@ -17,13 +17,9 @@ public class SummonerApiService {
     @Autowired
     private SummonerRepository summonerRepository;
 
-//    @Autowired
-//    private LeagueMatchIdService leagueMatchIdService;
     @Autowired
-    private LeagueMatchIdApiClient leagueMatchIdApiClient;
+    private LeagueMatchIdService leagueMatchIdService;
 
-    @Autowired
-    private LeagueMatchIdRepository leagueMatchIdRepository;
 
     public Summoner getSummoner(String name, String apiKey) {
         Summoner summoner = summonerRepository.findSummonerId(name);
@@ -31,9 +27,7 @@ public class SummonerApiService {
         {
             summoner = summonerApiClient.getSummonerId(name, apiKey);
             summonerRepository.saveSummonerId(summoner);
-            LeagueMatchId[] leagueMatchId = leagueMatchIdApiClient.getMatchIdRecentFive(summoner.getAccountId(),apiKey);
-            leagueMatchIdRepository.saveFiveLeagueMatchID(leagueMatchId);
-            //leagueMatchIdService.getFiveLeagueMatchId(summoner.getAccountId(),apiKey);
+            leagueMatchIdService.getFiveLeagueMatchId(summoner.getAccountId(),apiKey);
         }
         return summoner;
     }
