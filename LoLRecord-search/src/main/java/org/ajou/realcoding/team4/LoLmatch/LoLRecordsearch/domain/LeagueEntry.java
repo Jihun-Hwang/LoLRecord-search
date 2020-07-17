@@ -3,7 +3,7 @@ package org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain;
 import lombok.Data;
 
 @Data
-public class League {
+public class LeagueEntry {
 
     /*
     {
