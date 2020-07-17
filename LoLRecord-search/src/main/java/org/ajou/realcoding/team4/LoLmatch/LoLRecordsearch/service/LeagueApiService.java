@@ -15,7 +15,7 @@ public class LeagueApiService {
     private LeagueEntryRepository leagueEntryRepository;
 
     public LeagueEntry getLeagueEntry(String encryptedSummonerId, String apiKey) {
-        LeagueEntry leagueEntry = leagueApiClient.getLeagueEntry(encryptedSummonerId, apiKey);
+        LeagueEntry leagueEntry = leagueApiClient.getLeagueEntry(encryptedSummonerId, apiKey).[0];
         return leagueEntry;
     }
 }

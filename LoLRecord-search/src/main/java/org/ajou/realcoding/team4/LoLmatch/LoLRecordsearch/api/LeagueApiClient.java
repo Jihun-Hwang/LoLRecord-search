@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class LeagueApiClient {
     @Autowired
     public RestTemplate restTemplate;
-    public static final String LEAGUE_REQUEST_URI = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{encryptedSummonerId}?api_key={apiKey}";
+    public final String LEAGUE_REQUEST_URI = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{encryptedSummonerId}?api_key={apiKey}";
 
     public LeagueEntry getLeagueEntry(String encryptedSummonerId, String apiKey) {
         LeagueEntry leagueEntry = restTemplate.getForObject(LEAGUE_REQUEST_URI, LeagueEntry.class, encryptedSummonerId, apiKey);
