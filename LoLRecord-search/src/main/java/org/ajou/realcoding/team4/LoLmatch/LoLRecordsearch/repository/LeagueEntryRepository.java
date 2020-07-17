@@ -13,7 +13,6 @@ public class LeagueEntryRepository {
     private MongoTemplate mongoTemplate;
 
     private void saveLeagueEntry(LeagueEntry leagueEntry) {
-        LeagueEntry savedLeagueEntry = mongoTemplate.save(leagueEntry[0]);
-        log.info("Saved: {}", savedLeagueEntry);
+        LeagueEntry savedLeagueEntry = mongoTemplate.save(leagueEntry);
     }
 }

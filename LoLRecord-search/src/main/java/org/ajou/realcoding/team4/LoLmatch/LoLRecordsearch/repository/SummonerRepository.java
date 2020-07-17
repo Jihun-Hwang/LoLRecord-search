@@ -16,7 +16,7 @@ public class SummonerRepository {
 
     public void saveSummonerId(Summoner summoner) {
         Summoner savedId=mongoTemplate.save(summoner);
-        log.info("Saved: {}", savedId);
+        //log.info("Saved: {}", savedId);
     }
 
     public Summoner findSummonerId(String name) {
@@ -24,7 +24,7 @@ public class SummonerRepository {
                 Criteria.where("_id").is(name)
         );
         Summoner summoner = (Summoner) mongoTemplate.findOne(query, Summoner.class);
-        log.info("Found summoner id! id: {} ", name);
+        //log.info("Found summoner id! id: {} ", name);
         return summoner;
     }
 }
