@@ -20,21 +20,24 @@ public class SearchController {
     @Autowired
     private LeagueApiService leagueApiService;
 
-    @Autowired
-    private LeagueMatchIdService leagueMatchIdService;
+//    @Autowired
+//    private LeagueMatchIdService leagueMatchIdService;
 
     @GetMapping("/summonerApi-service/summoners")
     public Summoner getSummoner(@RequestParam String SummonerId, @RequestParam String apiKey) {
         return summonerApiService.getSummoner(SummonerId, apiKey);
     }
 
-    public LeagueMatchId[] getLFiveMatchId(@RequestParam String encryptedAccountId, @RequestParam String apiKey) {
-        return leagueMatchIdService.getFiveLeagueMatchId(encryptedAccountId, apiKey);
-    }
 
     @GetMapping("/leagueApi-service/leagues")
     public LeagueEntry getLeagueEntry(@RequestParam String encryptedSummonerId, @RequestParam String apiKey) {
         return leagueApiService.getLeagueEntry(encryptedSummonerId, apiKey);
     }
+/*
+    @GetMapping("/leagueMatch-service/matchIDs")
+    public LeagueMatchId getLFiveMatchId(@RequestParam String encryptedAccountId, @RequestParam String apiKey) {
+        return leagueMatchIdService.getFiveLeagueMatchId(encryptedAccountId, apiKey);
+    }
 
+ */
 }
