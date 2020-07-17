@@ -40,7 +40,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Weather Crawler")
+                .title("LoLRecord-search")
                 .version("1.0")
                 .build();
     }
