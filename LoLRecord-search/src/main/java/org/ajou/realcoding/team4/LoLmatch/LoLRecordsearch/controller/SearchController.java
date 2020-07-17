@@ -19,7 +19,7 @@ public class SearchController {
     }
 
     @GetMapping("/leagueApi-service/leagues")
-    public LeagueEntry getLeagueEntry(@RequestParam String encryptedSummonerId, String apiKey) {
+    public LeagueEntry getLeagueEntry(@RequestParam String encryptedSummonerId, @RequestParam String apiKey) {
         return LeagueApiService.getLeagueEntry(encryptedSummonerId, apiKey);
     }
 }
