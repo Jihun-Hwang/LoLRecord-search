@@ -6,14 +6,15 @@ import java.util.List;
 
 @Data
 public class MatchInfo {  // Match information
-    private int gameId;
+    private long gameId;
     private List<Teams> teams;
     private List<Participants> participants;
 
     @Data
     public static class Teams{
         private int teamId;
-        boolean win;
+        private String win;
+        //private boolean win;
     }
 
     @Data
