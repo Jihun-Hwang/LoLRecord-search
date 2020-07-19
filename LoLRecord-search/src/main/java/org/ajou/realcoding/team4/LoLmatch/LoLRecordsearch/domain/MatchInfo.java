@@ -17,7 +17,7 @@ public class MatchInfo {
     }
 
     @Data
-    public static class Participants{ 
+    public static class Participants{
         private int participantId;
         private int teamId;
         private int championId;
