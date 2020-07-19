@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class MatchInfo {  // Match information
+public class MatchInfo {
     private long gameId;
     private List<Teams> teams;
     private List<Participants> participants;
@@ -14,11 +14,10 @@ public class MatchInfo {  // Match information
     public static class Teams{
         private int teamId;
         private String win;
-        //private boolean win;
     }
 
     @Data
-    public static class Participants{ // Information about the requested summoner
+    public static class Participants{ 
         private int participantId;
         private int teamId;
         private int championId;
