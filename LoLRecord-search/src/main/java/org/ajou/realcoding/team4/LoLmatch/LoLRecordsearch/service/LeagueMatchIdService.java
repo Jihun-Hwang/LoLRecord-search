@@ -30,7 +30,7 @@ public class LeagueMatchIdService {
 
     public LeagueMatchId getFiveLeagueMatchId (String encryptedAccountId, String apiKey) {
         LeagueMatchId currentLeagueMatchId = leagueMatchIdApiClient.getMatchIdRecentFive(encryptedAccountId, apiKey);
-        leagueMatchIdRepository.saveFiveLeagueMatchID(currentLeagueMatchId);
+        // leagueMatchIdRepository.saveFiveLeagueMatchID(currentLeagueMatchId);
 
         // leagueMatchIdRepository.saveFiveLeagueMatchID(leagueMatchId);
         // this.apiKey = apiKey;
