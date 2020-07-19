@@ -3,8 +3,10 @@ package org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.api;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.MatchInfo;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.Summoner;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+@Service
 public class MatchInfoApiClient {
     @Autowired
     public RestTemplate restTemplate;
