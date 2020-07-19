@@ -28,7 +28,7 @@ public class SearchController {
         return summonerApiService.getSummoner(SummonerId, apiKey);
     }
 
-
+/*
     @GetMapping("/leagueApi-service/leagues")
     public LeagueEntry getLeagueEntry(@RequestParam String encryptedSummonerId, @RequestParam String apiKey) {
         return leagueApiService.getLeagueEntry(encryptedSummonerId, apiKey);
