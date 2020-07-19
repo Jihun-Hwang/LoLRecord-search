@@ -22,13 +22,12 @@ public class SummonerApiService {
 
 
     public Summoner getSummoner(String name, String apiKey) {
-        Summoner summoner = summonerRepository.findSummonerId(name);
-        if(summoner == null)
-        {
-            summoner = summonerApiClient.getSummonerId(name, apiKey);
-            summonerRepository.saveSummonerId(summoner);
-            leagueMatchIdService.getFiveLeagueMatchId(summoner.getAccountId(),apiKey);
+        Summoner currentSummoner = summonerRepository.findSummonerId(name);
+        if(currentSummoner == null) {
+            currentSummoner = summonerApiClient.getSummonerId(name, apiKey);
+            summonerRepository.saveSummonerId(currentSummoner);
+            //leagueMatchIdService.getFiveLeagueMatchId(summoner.getAccountId(),apiKey);
         }
-        return summoner;
+        return currentSummoner;
     }
 }

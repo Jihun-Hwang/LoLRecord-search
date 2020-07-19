@@ -18,32 +18,33 @@ import java.util.Queue;
 
 
 @Service
-@EnableScheduling
+//@EnableScheduling
 public class LeagueMatchIdService {
     @Autowired
     private LeagueMatchIdApiClient leagueMatchIdApiClient;
-
     @Autowired
     private LeagueMatchIdRepository leagueMatchIdRepository;
 
-    private Queue<String> savedEncryptedAccountId = new LinkedList<>();
-    String apiKey;
+    // private Queue<String> savedEncryptedAccountIdQueue = new LinkedList<>();
+    //String apiKey;
 
     public LeagueMatchId getFiveLeagueMatchId (String encryptedAccountId, String apiKey) {
-        LeagueMatchId leagueMatchId = leagueMatchIdApiClient.getMatchIdRecentFive(encryptedAccountId,apiKey);
-        savedEncryptedAccountId.add(encryptedAccountId);
-        //leagueMatchIdRepository.saveFiveLeagueMatchID(leagueMatchId);
-        this.apiKey = apiKey;
-        return leagueMatchId;
-    }
+        LeagueMatchId currentLeagueMatchId = leagueMatchIdApiClient.getMatchIdRecentFive(encryptedAccountId, apiKey);
+        // leagueMatchIdRepository.saveFiveLeagueMatchID(currentLeagueMatchId);
 
+        // leagueMatchIdRepository.saveFiveLeagueMatchID(leagueMatchId);
+        // this.apiKey = apiKey;
+
+        return currentLeagueMatchId;
+    }
+/*
     @Scheduled(fixedDelay = 1500L)
     public void getCurrentLoLFiveGameIDsEveryTwoSeconds(){
-        String targetEncryptedAccountId = savedEncryptedAccountId.poll();
+        String targetEncryptedAccountId = savedEncryptedAccountIdQueue.poll();
         if(targetEncryptedAccountId != null){
-            savedEncryptedAccountId.add(targetEncryptedAccountId);
+            savedEncryptedAccountIdQueue.add(targetEncryptedAccountId);
             LeagueMatchId leagueMatchId = leagueMatchIdApiClient.getMatchIdRecentFive(targetEncryptedAccountId,this.apiKey);
             leagueMatchIdRepository.saveFiveLeagueMatchID(leagueMatchId);
         }
-    }
+    } */
 }
