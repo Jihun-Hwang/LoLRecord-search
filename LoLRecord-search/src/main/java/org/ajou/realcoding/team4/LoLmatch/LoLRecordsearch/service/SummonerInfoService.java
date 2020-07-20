@@ -1,16 +1,13 @@
 package org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.service;
 
-import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.api.LeagueMatchIdApiClient;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.api.SummonerApiClient;
-import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.LeagueMatchId;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.Summoner;
-import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.repository.LeagueMatchIdRepository;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.repository.SummonerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SummonerApiService {
+public class SummonerInfoService {
 
     @Autowired
     private SummonerApiClient summonerApiClient;
@@ -18,7 +15,7 @@ public class SummonerApiService {
     private SummonerRepository summonerRepository;
 
     @Autowired
-    private LeagueMatchIdService leagueMatchIdService;
+    private MatchIdService leagueMatchIdService;
 
 
     public Summoner getSummoner(String name, String apiKey) {
