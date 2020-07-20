@@ -7,12 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class LeagueApiService {
+public class LeagueInfoService {
     @Autowired
     private LeagueApiClient leagueApiClient;
-
-    @Autowired
-    private LeagueEntryRepository leagueEntryRepository;
 
     public LeagueEntry getLeagueEntry(String encryptedSummonerId, String apiKey) {
         LeagueEntry[] leagueEntry = leagueApiClient.getLeagueEntry(encryptedSummonerId, apiKey);

@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Slf4j
+//@Slf4j
 public class SummonerRepository {
     @Autowired
     private MongoTemplate mongoTemplate;

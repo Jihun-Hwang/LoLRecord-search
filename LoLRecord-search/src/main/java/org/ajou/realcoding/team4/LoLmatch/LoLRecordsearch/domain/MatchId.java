@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class LeagueMatchId {
+public class MatchId {
    // @Id
    // private int startIndex;
    // private int endIndex;

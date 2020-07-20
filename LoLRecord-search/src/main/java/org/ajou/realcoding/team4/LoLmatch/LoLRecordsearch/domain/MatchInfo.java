@@ -9,6 +9,7 @@ public class MatchInfo {
     private long gameId;
     private List<Teams> teams;
     private List<Participants> participants;
+    private List<ParticipantIdentities> participantIdentities;
 
     @Data
     public static class Teams{
@@ -32,6 +33,17 @@ public class MatchInfo {
             private int assists;
         }
 
+    }
+
+    @Data
+    public static class ParticipantIdentities{
+        private int participantId;
+        private Player player;
+
+        @Data
+        public static class Player{
+            private String summonerName;
+        }
     }
 
 }
