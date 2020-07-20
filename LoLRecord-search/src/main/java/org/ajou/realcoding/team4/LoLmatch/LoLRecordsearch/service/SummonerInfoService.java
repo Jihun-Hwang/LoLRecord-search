@@ -8,22 +8,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SummonerInfoService {
-
     @Autowired
     private SummonerApiClient summonerApiClient;
     @Autowired
     private SummonerRepository summonerRepository;
-
-    @Autowired
-    private MatchIdService leagueMatchIdService;
-
 
     public Summoner getSummoner(String name, String apiKey) {
         Summoner currentSummoner = summonerRepository.findSummonerId(name);
         if(currentSummoner == null) {
             currentSummoner = summonerApiClient.getSummonerId(name, apiKey);
             summonerRepository.saveSummonerId(currentSummoner);
-            //leagueMatchIdService.getFiveLeagueMatchId(summoner.getAccountId(),apiKey);
         }
         return currentSummoner;
     }
