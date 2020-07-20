@@ -27,6 +27,10 @@ LoLRecordSearchApplication.java
 ```
 localhost:8888
 ```
+If Swagger UI doesn't appear, change the port number to something other than `8888`. The port number can be changed in the application.properties file located at the below location.
+```
+LoLRecord-search\src\main\resources\application.properties
+```
 
 5. Input required fields to use this API.
 You need to pass a summoner name and your personal API key for the Riot API.
@@ -36,11 +40,6 @@ Try to make inputs CaSe SeNsItIvE for best accuracy.
 
 ## Implementation
 
-Members of our team has done research and revision of class materials to implement this API. 
+Members of our team has done research and reviewed class materials to implement this API. We greatly thank our instructor for helping us on our way to implement this API. 
 
-| Name |
-| ---- |
-| 황지훈 |
-| 고예준 |
-| 김소이 |
-| 최형택 |
+
