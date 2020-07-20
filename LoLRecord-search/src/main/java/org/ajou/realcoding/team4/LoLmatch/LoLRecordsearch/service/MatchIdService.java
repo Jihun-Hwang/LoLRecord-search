@@ -11,8 +11,8 @@ public class MatchIdService {
     private MatchIdApiClient matchIdApiClient;
 
     public MatchId getFiveMatchId(String encryptedAccountId, String apiKey) {
-        MatchId currentLeagueMatchId = matchIdApiClient.getMatchIdRecentFive(encryptedAccountId, apiKey);
-        return currentLeagueMatchId;
+        MatchId currentMatchId = matchIdApiClient.getMatchIdRecentFive(encryptedAccountId, apiKey);
+        return currentMatchId;
     }
 
 }
