@@ -25,7 +25,7 @@ public class MatchInfoService {
 
             for(int j=0;j<10;j++){
                 String tempName = tempMatchInfo.getParticipantIdentities().get(j).getPlayer().getSummonerName();
-                if(tempName.equals(name)){
+                if(tempName.equalsIgnoreCase(name)){
                     tempSummonerMatchInfo.setName(name);
                     tempSummonerMatchInfo.setParticipantId(tempMatchInfo.getParticipants().get(j).getParticipantId());
                     tempSummonerMatchInfo.setTeamId(tempMatchInfo.getParticipants().get(j).getTeamId());
