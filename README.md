@@ -14,7 +14,7 @@ Below is a table which describes required input fields to use this API.
 1. Pull this repository using the below command in a terminal.
 ```
 git clone https://github.com/ajou-RealCoding1-group4-git/LoLRecord-search.git
-``
+```
 
 2. Open the project using a Java IDE. We have tested with IntelliJ IDEA. Java 1.8 is recommended for maximum compatibility with Maven.
 
