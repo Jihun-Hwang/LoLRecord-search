@@ -3,6 +3,7 @@ The LoLRecord-search API can be used to load 5 most recent match stats of a give
 
 ![Example Result Image](/result-img2.png)
 
+
 ## Required Inputs
 
 Below is a table which describes required input fields to use this API.
@@ -11,6 +12,7 @@ Below is a table which describes required input fields to use this API.
 | summonerName | String | Name of summoner to query |
 | apiKey | String | Personal API key for Riot API |
 
+
 ## Set-Up
 
 1. Pull this repository using the below command in a terminal.
@@ -18,7 +20,7 @@ Below is a table which describes required input fields to use this API.
 git clone https://github.com/ajou-RealCoding1-group4-git/LoLRecord-search.git
 ```
 
-2. Open the project using a Java IDE. We have tested with IntelliJ IDEA. Java 1.8 is recommended for maximum compatibility with Maven.
+2. Open the project using a Java IDE. We have tested with IntelliJ IDEA. Java 1.8 is recommended for maximum compatibility with Maven. MongoDB is recommended to view the database. Please install other dependencies according to ``POM.xml``.
 
 3. Run the local web server by running the below class.
 ```
@@ -40,11 +42,13 @@ Try to make inputs CaSe SeNsItIvE for best accuracy.
 
 6. Check the response body for match results of 5 most recent games.
 
+
 ## Implementation
 
 Members of our team has done research and reviewed class materials to implement this API. We greatly thank our instructor for helping us on our way to implement this API.
 
 Team Members: 황지훈, 고예준, 김소이, 최형택
+
 
 ## Discussions
 
