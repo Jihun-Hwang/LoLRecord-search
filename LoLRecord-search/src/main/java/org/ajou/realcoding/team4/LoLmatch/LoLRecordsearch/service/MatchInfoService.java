@@ -1,7 +1,7 @@
 package org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.service;
 
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.api.MatchInfoApiClient;
-import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.LeagueMatchId;
+import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.MatchId;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.MatchInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class MatchInfoService {
     @Autowired
     private MatchInfoApiClient matchInfoApiClient;
 
-    public List<MatchInfo> getMatchInfoList(LeagueMatchId currentFiveLeagueMatchId, String apiKey) {
+    public List<MatchInfo> getMatchInfoList(MatchId currentFiveLeagueMatchId, String apiKey) {
         List<MatchInfo> matchInfoList = new LinkedList<>();
         for(int i = 0; i < 5; i++){
             matchInfoList.add(
