@@ -1,7 +1,6 @@
 package org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.service;
 
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.api.LeagueApiClient;
-import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.repository.LeagueEntryRepository;
 import org.ajou.realcoding.team4.LoLmatch.LoLRecordsearch.domain.LeagueEntry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
