@@ -15,8 +15,8 @@ public class MatchIdApiClient {
 
 
     public MatchId getMatchIdRecentFive(String encryptedAccountId, String apiKey) {
-        MatchId leagueMatchId = restTemplate.getForObject(MATCHID_REQUEST_URI, MatchId.class, encryptedAccountId, apiKey);
-        return leagueMatchId;
+        MatchId currentFiveMatchId = restTemplate.getForObject(MATCHID_REQUEST_URI, MatchId.class, encryptedAccountId, apiKey);
+        return currentFiveMatchId;
     }
 
 }
