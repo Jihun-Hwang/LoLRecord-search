@@ -27,14 +27,13 @@ public class MatchInfoService {
                 String tempName = tempMatchInfo.getParticipantIdentities().get(j).getPlayer().getSummonerName();
                 if(tempName.equals(name)){
                     tempSummonerMatchInfo.setName(name);
-                    tempSummonerMatchInfo.setParticipantId(tempMatchInfo.getParticipantIdentities().get(j).getParticipantId());
-                    tempSummonerMatchInfo.setTeamId(tempMatchInfo.getParticipants().get(j).getTeamId());
-                    tempSummonerMatchInfo.setChampionId(tempMatchInfo.getParticipants().get(j).getChampionId());
                     tempSummonerMatchInfo.setParticipantId(tempMatchInfo.getParticipants().get(j).getParticipantId());
-                    tempSummonerMatchInfo.setAssists(tempMatchInfo.getParticipants().get(j).getStats().getAssists());
-                    tempSummonerMatchInfo.setDeaths(tempMatchInfo.getParticipants().get(j).getStats().getDeaths());
-                    tempSummonerMatchInfo.setKills(tempMatchInfo.getParticipants().get(j).getStats().getKills());
+                    tempSummonerMatchInfo.setTeamId(tempMatchInfo.getParticipants().get(j).getTeamId());
                     tempSummonerMatchInfo.setWin(tempMatchInfo.getParticipants().get(j).getStats().isWin());
+                    tempSummonerMatchInfo.setChampionId(tempMatchInfo.getParticipants().get(j).getChampionId());
+                    tempSummonerMatchInfo.setKills(tempMatchInfo.getParticipants().get(j).getStats().getKills());
+                    tempSummonerMatchInfo.setDeaths(tempMatchInfo.getParticipants().get(j).getStats().getDeaths());
+                    tempSummonerMatchInfo.setAssists(tempMatchInfo.getParticipants().get(j).getStats().getAssists());
                     break;
                 }
             }
