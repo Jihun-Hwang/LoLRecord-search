@@ -4,7 +4,7 @@ The LoLRecord-search API can be used to load 5 most recent match stats of a give
 ## Required Inputs
 
 Below is a table which describes required input fields to use this API.
-| Name | Type | Description |
+| Parameter | Type | Description |
 | ---- | ---- | ----------- |
 | summonerName | String | Name of summoner to query |
 | apiKey | String | Personal API key for Riot API |
