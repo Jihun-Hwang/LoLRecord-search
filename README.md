@@ -9,7 +9,7 @@ Below is a table which describes required input fields to use this API.
 | summonerName | String | Name of summoner to query |
 | apiKey | String | Personal API key for Riot API |
 
-## Set-up
+## Set-Up
 
 1. Pull this repository using the below command in a terminal.
 ```
@@ -48,7 +48,17 @@ Team Members: 황지훈, 고예준, 김소이, 최형택
 
 This section illustrates past discussions our team had while implementing the API.
 
-1. Frequency to pull match data via Riot API: On-demand vs Queued intervals
+### 1. Saving previously searched summoner names to database
+| Type | Description | Selected |
+| - | - | - |
+| Save | Saves summoner name to reuse in the future. | O |
+| Don't Save | Self-explanatory |  |
+
+Our API first checks input summoner name and looks it up in our database. If there is an identical match, our API will use saved data to pull match information from Riot servers. If there isn't a match, our API will pull account data from Riot servers, save pulled account data to our database, and then fetch match information.
+
+Saving summoner names reduces future use of Riot API when pulling summoner data. Summoner data includes encryptedSummonerName, accountId, and other data. These data are required to retrieve match data from Riot APIs and since they don't change over time it is more efficient to store these data to a database. 
+
+### 2. Frequency to pull match data via Riot API: On-demand vs Queued intervals
 
 | Type | Description | Selected |
 | ---- | ----------- | -------- |
