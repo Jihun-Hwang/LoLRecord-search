@@ -19,7 +19,7 @@ import java.util.Queue;
 
 @Service
 //@EnableScheduling
-public class LeagueMatchIdService {
+public class MatchIdService {
     @Autowired
     private LeagueMatchIdApiClient leagueMatchIdApiClient;
     @Autowired
