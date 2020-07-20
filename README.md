@@ -1,5 +1,6 @@
 # LoLRecord-search
 The LoLRecord-search API can be used to load 5 most recent match stats of a given summoner in Riot Game's League of Legends.
+![Example Result Image](/result-img.png)
 
 ## Required Inputs
 
